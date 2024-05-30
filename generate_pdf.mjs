@@ -21,10 +21,6 @@ if (outputDir) {
     fs.mkdirSync(outputDir, { recursive: true });
 }
 
-// Debugging: print the paths
-console.log(`Markdown path: ${path.resolve(markdownFile)}`);
-console.log(`PDF path: ${path.resolve(pdfOutputFile)}`);
-
 // Convert markdown to PDF with custom CSS
 markdownpdf({
     cssPath: path.join(__dirname, 'style.css'),
