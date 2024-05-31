@@ -3,7 +3,7 @@ Convert nmap XML reports to a nice md and pdf structure.
 
 # Usage 
 
-python `copy_nmap.py`  `<XML file>` `<output md file>`  `<output format ->[pdf, md]>`
+python `nmap_xml_2_mdPdf.py`  `<XML file>` `<output md file>`  `<output format ->[pdf, md]>`
 
 ## Example
 python `nmap_xml_2_mdPdf.py`  `sample-nmap-output.xml` `report.md`  `pdf`
