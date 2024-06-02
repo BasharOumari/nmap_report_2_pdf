@@ -5,7 +5,7 @@ Convert nmap XML reports to a nice md and pdf structure.
 
 `pip install -r requirements.txt`
 
-`npm install` in #pdf_generator
+`npm install` in /pdf_generator
 
 
 # Usage 
