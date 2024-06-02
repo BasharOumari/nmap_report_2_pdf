@@ -1,6 +1,13 @@
 # nmap_report_2_pdf
 Convert nmap XML reports to a nice md and pdf structure.
 
+# Installation
+
+`pip install -r requirements.txt`
+
+`npm install` in #pdf_generator
+
+
 # Usage 
 
 python `nmap_xml_2_mdPdf.py`  `<XML file>` `<output md file>`  `<output format ->[pdf, md]>`
