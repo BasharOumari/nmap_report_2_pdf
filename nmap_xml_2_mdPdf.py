@@ -177,7 +177,7 @@ if __name__ == "__main__":
         sys.exit(1)
 
     file_path = sys.argv[1]
-    output_file = sys.argv[2]
+    output_file = os.path.join("generated_files", sys.argv[2])
     output_format = sys.argv[3]
 
     output_file = output_file if output_file.endswith('.md') else output_file + '.md'
@@ -207,8 +207,8 @@ if __name__ == "__main__":
 
         # Convert markdown to PDF using Node.js script
         try:
-            subprocess.run(['node', 'generate_pdf.mjs', output_file, pdf_output_file], check=True)
-            print(f"PDF file generated: {pdf_output_file}")
+            node_script = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'pdf_generator', 'generate_pdf.mjs')
+            subprocess.run(['node', node_script, output_file, pdf_output_file])
         except subprocess.CalledProcessError as e:
             print(f"Error converting to PDF: {e}")
     else:
